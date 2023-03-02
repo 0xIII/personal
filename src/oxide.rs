@@ -42,22 +42,19 @@ fn main() -> Result<(), Error>{
     for (_, config) in &templates {
         let post_path = format!("{}/{}.html", args.out, config.title.clone().transform(Transforms::Lowercase).transform(Transforms::NoWhitespaces));
         let markup = html! {
+            // <li><a href="">MESA virtual machine</a> • Documentation</li>
             li {
-                time .mid-gray.tracked{
-                    (config.date);
+                a href=(post_path) {
+                    (config.title);
                 }
-                a href=(post_path) .dib.pl2.blue.dim {
-                    h2 .f5.dib.blue.dim {
-                        (config.title);
-                    }
-                }
+                (format!("• {}", config.date))
             } 
         };
         post_list_nav.push_str(&markup.into_string());
     }
 
     templates.build(&format!("{}{}", args.root, args.out))?;
-    let home = HomeTemplate::new(&format!("{}/home.html", args.templates), post_list_nav.to_string())?;
+    let home = HomeTemplate::new(&format!("{}/index.html", args.templates), post_list_nav.to_string())?;
     home.build(&args.root)?;
 
     Ok(())

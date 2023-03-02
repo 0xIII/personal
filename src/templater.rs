@@ -37,12 +37,12 @@ impl HomeTemplate {
 
 impl Buildable for HomeTemplate {
     fn build(self, out: &str) -> Result<(), Error> {
-        let filepath = format!("{}/home.html", out);
+        let filepath = format!("{}/index.html", out);
         let dom: DOM = self.template
             .replace("{{list}}", &self.markup);
         write(filepath, dom)?;
 
-        println!("[+] Built home.html");
+        println!("[+] Built index.html");
 
         Ok(())
     }
