@@ -47,7 +47,7 @@ fn main() -> Result<(), Error>{
                 a href=(post_path) {
                     (config.title);
                 }
-                (format!("• {}", config.date))
+                (format!(" • {}", config.date))
             } 
         };
         post_list_nav.push_str(&markup.into_string());
