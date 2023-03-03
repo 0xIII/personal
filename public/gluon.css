@@ -1,4 +1,6 @@
-body { width: fit-content; font-family: monospace; font-size: 0.7rem; padding-left: 4rem; padding-right: 4rem; /*margin-left: auto; margin-right: auto;*/ }
+@import url('https://fonts.bunny.net/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+body { font-family: 'IBM Plex Mono', monospace; width: fit-content; font-size: 0.7rem; padding-left: 4rem; padding-right: 4rem; /*margin-left: auto; margin-right: auto;*/ }
 body > div { display: flex; flex-direction: row; }
 @media screen and (max-width: 60em) { body > div { flex-direction: column; } }
 
