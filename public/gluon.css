@@ -1,6 +1,11 @@
 @import url('https://fonts.bunny.net/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
-body { font-family: 'IBM Plex Mono', monospace; width: fit-content; font-size: 0.7rem; padding-left: 4rem; padding-right: 4rem; }
+:root {
+    --alpha: #FFFCF9;
+    --beta: #071013;
+}
+
+body { color: var(--beta); background-color: var(--alpha); font-family: 'IBM Plex Mono', monospace; width: fit-content; font-size: 0.7rem; padding-left: 4rem; padding-right: 4rem; }
 
 nav { display: flex; flex-direction: flex-row; justify-content: space-between; }
 nav > span { align-self: center; }
@@ -8,13 +13,13 @@ nav > span { align-self: center; }
 ol { display: flex; flex-direction: column; flex-wrap: wrap; min-width: 30em; list-style: upper-roman; padding-left: 0; }
 ol > li { padding: 0.25rem 0; width: fit-content; }
 
-a { text-underline-offset: 2px; color: black; }
-a:hover { text-decoration: none; }
+a { text-underline-offset: 2px; color: var(--beta); }
+a:hover { color: var(--alpha); background-color: var(--beta); text-decoration: none; }
 
 article { line-height: 1.1rem; width: 30em; text-align: justify; padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 0; }
-article > h4 { border-bottom: 1px solid black; }
+article > h4 { border-bottom: 1px solid var(--beta); }
 
-footer { border-top: 1px solid black; }
+footer { border-top: 1px solid var(--beta); }
 footer > span { padding-top: 0.5rem; padding-bottom: 0.5rem; float:right; }
 
 .cc {  padding-left: 15px; background-image: url("./assets/cc.svg"); background-size: 14px 14px; background-position: 0 0px; background-repeat: no-repeat; }
