@@ -19,6 +19,8 @@ a:hover { color: var(--alpha); background-color: var(--beta); text-decoration: n
 article { line-height: 1.1rem; width: 30em; text-align: justify; padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 0; }
 article > h4 { border-bottom: 1px solid var(--beta); }
 
+h4 { border-bottom: 1px solid var(--beta); }
+
 footer { border-top: 1px solid var(--beta); }
 footer > span { padding-top: 0.5rem; padding-bottom: 0.5rem; float:right; }
 
