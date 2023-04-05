@@ -11,7 +11,7 @@
             <h4><a href="/">atopos</a></h4>
             <span>[<a href="https://hachyderm.io/@III">Mastodon</a>] [<a href="https://github.com/0xIII">Github</a>]</span>
         </nav>
-        <article class="content" >
+        <article class="content" id="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
             <h4>Now</h4>
             <p>Some of the projects I am currently working on (<i>"Now"</i> is a rather relative term which does not always suit the temporal aspect perfectly ;) ):</p>
@@ -35,3 +35,31 @@
         </footer>
     </body>
 </html>
+<script>
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    function random() {
+        var elements = document.getElementsByClassName("random");
+        for(let i = 0; i < elements.length; i++) {
+            console.log(elements[i]);
+            let to;
+            if (screen.width < document.getElementById("content").offsetWidth+50) {
+                to = {
+                    x: getRandomInt(screen.width-100),
+                    y: document.getElementById("content").offsetHeight+getRandomInt(screen.height-document.getElementById("content").offsetHeight-100)
+                };
+            } else {
+                to = {
+                    x: document.getElementById("content").offsetWidth+getRandomInt(screen.width-document.getElementById("content").offsetWidth-100),
+                    y: getRandomInt(screen.height-100)
+                };
+            }
+            elements[i].style.top = `${to.y}px`;
+            elements[i].style.left = `${to.x}px`;
+        }
+    }
+
+    window.onload = random();
+</script>

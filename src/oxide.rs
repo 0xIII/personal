@@ -43,7 +43,7 @@ fn main() -> Result<(), Error>{
         let post_path = format!("{}/{}.html", args.out, config.title.clone().transform(Transforms::Lowercase).transform(Transforms::NoWhitespaces));
         let markup = html! {
             // <li><a href="">MESA virtual machine</a> • Documentation</li>
-            li {
+            li.random {
                 a href=(post_path) {
                     (config.title);
                 }

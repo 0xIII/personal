@@ -30,3 +30,5 @@ footer > span { padding-top: 0.5rem; padding-bottom: 0.5rem; float:right; }
 .cc {  padding-left: 15px; background-image: url("./assets/cc.svg"); background-size: 14px 14px; background-position: 0 0px; background-repeat: no-repeat; }
 
 img { width: 100%; }
+
+ol > li { border: 1px solid black; position: absolute; list-style-type: none; border-radius: 99px; padding-left: 5px; padding-right: 5px; }
