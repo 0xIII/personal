@@ -36,7 +36,7 @@
     </body>
 </html>
 <script>
-    const colors = ["#f4f1de", "#e07a5f", "#81b29a", "#f2cc8f"];
+    const colors = ["#e07a5f", "#81b29a", "#f2cc8f"];
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
@@ -49,7 +49,7 @@
             let to;
             if (screen.width < document.getElementById("content").offsetWidth+200) {
                 to = {
-                    x: getRandomInt(screen.width-100),
+                    x: document.getElementById("content").offsetWidth+(screen.width-document.getElementById("content").offsetWidth-100),
                     y: document.getElementById("content").offsetHeight+getRandomInt(screen.height-document.getElementById("content").offsetHeight-100)
                 };
             } else {
