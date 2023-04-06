@@ -26,7 +26,7 @@
             <h4>Index</h4>
             <span>... so empty ( ˘︹˘ )</span>
             <ol>
-                <!--<li><a href="./mesa.html">MESA Reference</a> • 13/02/23</li>-->
+                <li class="random"><a href="./mesa.html">MESA Reference</a> • 13/02/23</li>
                 <li class="random"><a href="posts/smth-else.html">Smth else</a> • 21/01/22</li>
             </ol>
         </div>
@@ -36,6 +36,8 @@
     </body>
 </html>
 <script>
+    const colors = ["#f4f1de", "#e07a5f", "#81b29a", "#f2cc8f"];
+
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
@@ -45,19 +47,20 @@
         for(let i = 0; i < elements.length; i++) {
             console.log(elements[i]);
             let to;
-            if (screen.width < document.getElementById("content").offsetWidth+50) {
+            if (screen.width < document.getElementById("content").offsetWidth+200) {
                 to = {
                     x: getRandomInt(screen.width-100),
                     y: document.getElementById("content").offsetHeight+getRandomInt(screen.height-document.getElementById("content").offsetHeight-100)
                 };
             } else {
                 to = {
-                    x: document.getElementById("content").offsetWidth+getRandomInt(screen.width-document.getElementById("content").offsetWidth-100),
+                    x: document.getElementById("content").offsetWidth+getRandomInt(screen.width-document.getElementById("content").offsetWidth)+100,
                     y: getRandomInt(screen.height-100)
                 };
             }
-            elements[i].style.top = `${to.y}px`;
-            elements[i].style.left = `${to.x}px`;
+            elements[i].style.top = `${to.y-elements[i].offsetHeight}px`;
+            elements[i].style.left = `${to.x-elements[i].offsetWidth}px`;
+            elements[i].style.backgroundColor = colors[getRandomInt(colors.length)];
         }
     }
 
