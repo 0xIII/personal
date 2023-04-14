@@ -23,8 +23,8 @@
             <li>PGP key - <a href="./assets/atopos.asc">here</a></li>
         </article>
         <div>
-            <h4>Index</h4>
-            <span>... so empty ( ˘︹˘ )</span>
+            <!--<h4>Index</h4>-->
+            <!--<span>... so empty ( ˘︹˘ )</span>-->
             <ol>
                 <li class="random"><a href="./mesa.html">MESA Reference</a> • 13/02/23</li>
                 <li class="random"><a href="posts/smth-else.html">Smth else</a> • 21/01/22</li>
@@ -36,7 +36,7 @@
     </body>
 </html>
 <script>
-    const colors = ["#e07a5f", "#81b29a", "#f2cc8f"];
+    const colors = ["#e07a5f", "#81b29a", "#f2cc8f", "#B7C3F3", "#FFD6E0"];
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
@@ -45,21 +45,21 @@
     function random() {
         var elements = document.getElementsByClassName("random");
         for(let i = 0; i < elements.length; i++) {
-            console.log(elements[i]);
+            console.log(`${window.innerWidth} : ${document.body.offsetWidth}`);
             let to;
-            if (screen.width < document.getElementById("content").offsetWidth+200) {
+            if (window.innerWidth < document.body.offsetWidth+100) {
                 to = {
-                    x: document.getElementById("content").offsetWidth+(screen.width-document.getElementById("content").offsetWidth-100),
-                    y: document.getElementById("content").offsetHeight+getRandomInt(screen.height-document.getElementById("content").offsetHeight-100)
+                    x: getRandomInt(document.body.offsetWidth-100),
+                    y: document.body.offsetHeight+getRandomInt(elements.length*100),
                 };
             } else {
                 to = {
-                    x: document.getElementById("content").offsetWidth+getRandomInt(screen.width-document.getElementById("content").offsetWidth)+100,
-                    y: getRandomInt(screen.height-100)
+                    x: document.body.offsetWidth+getRandomInt((window.innerWidth - document.body.offsetWidth)/2),
+                    y: getRandomInt(window.innerHeight-100)
                 };
             }
-            elements[i].style.top = `${to.y-elements[i].offsetHeight}px`;
-            elements[i].style.left = `${to.x-elements[i].offsetWidth}px`;
+            elements[i].style.top = `${to.y}px`;
+            elements[i].style.left = `${to.x}px`;
             elements[i].style.backgroundColor = colors[getRandomInt(colors.length)];
         }
     }
