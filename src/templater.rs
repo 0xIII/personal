@@ -16,6 +16,7 @@ pub struct Conf {
     pub title: String,
     pub date: String,
     pub template: String,
+    pub description: String,
 }
 
 #[derive(Default, Debug)]

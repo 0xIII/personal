@@ -23,10 +23,9 @@
             <li>PGP key - <a href="./assets/atopos.asc">here</a></li>
         </article>
         <div>
-            <!--<h4>Index</h4>-->
-            <!--<span>... so empty ( ˘︹˘ )</span>-->
+            <h4>Writing</h4>
             <ol>
-                <li class="random"><a href="./mesa.html">MESA Reference</a> • 13/02/23</li>
+                <li><a href="./mesa.html">MESA Reference</a> • 13/02/23<p>This attempt at a stack machine is more of an artistic piece by an eclectic mind, uniting - in true expressionist fashion - past computing milestones with the general disarray of my own person.</p></li>
                 {{list}}
             </ol>
         </div>
@@ -35,34 +34,3 @@
         </footer>
     </body>
 </html>
-<script>
-    const colors = ["#e07a5f", "#81b29a", "#f2cc8f", "#B7C3F3", "#FFD6E0"];
-
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }
-
-    function random() {
-        var elements = document.getElementsByClassName("random");
-        for(let i = 0; i < elements.length; i++) {
-            console.log(`${window.innerWidth} : ${document.body.offsetWidth}`);
-            let to;
-            if (window.innerWidth < document.body.offsetWidth+100) {
-                to = {
-                    x: getRandomInt(document.body.offsetWidth-100),
-                    y: document.body.offsetHeight+getRandomInt(elements.length*100),
-                };
-            } else {
-                to = {
-                    x: document.body.offsetWidth+getRandomInt((window.innerWidth - document.body.offsetWidth)/2),
-                    y: getRandomInt(window.innerHeight-100)
-                };
-            }
-            elements[i].style.top = `${to.y}px`;
-            elements[i].style.left = `${to.x}px`;
-            elements[i].style.backgroundColor = colors[getRandomInt(colors.length)];
-        }
-    }
-
-    window.onload = random();
-</script>

@@ -42,12 +42,14 @@ fn main() -> Result<(), Error>{
     for (_, config) in &templates {
         let post_path = format!("{}/{}.html", args.out, config.title.clone().transform(Transforms::Lowercase).transform(Transforms::NoWhitespaces));
         let markup = html! {
-            // <li><a href="">MESA virtual machine</a> • Documentation</li>
-            li.random {
+            li {
                 a href=(post_path) {
                     (config.title);
                 }
                 (format!(" • {}", config.date))
+                p {
+                    (config.description)
+                }
             } 
         };
         post_list_nav.push_str(&markup.into_string());
