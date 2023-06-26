@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "PPMondwest";
+    src: url("./assets/fonts/PPMondwest-Regular.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "PPWriter";
+    src: url("./assets/fonts/PPWriter-Book.otf") format("opentype");
+    font-weight: 400;
+}

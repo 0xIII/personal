@@ -21,7 +21,8 @@ article > h4 { border-bottom: 1px solid var(--beta); }
 article > li { list-style-type: square; margin-left: 1em;}
 /* article > li::before { content: "◼"; padding-right: 8px; } */
 
-h4 { border-bottom: 1px solid var(--beta); }
+/* h4 { border-bottom: 1px solid var(--beta); } */
+h4 { font-size: 1.25rem; }
 
 img { max-width: 100%; }
 
@@ -35,3 +36,11 @@ ol > li > p { margin-top: 0.1em; width: 30em; }
 
 ::-moz-selection { color: var(--alpha); background: var(--beta); }
 ::selection { color: var(--alpha); background: var(--beta); }
+
+h1, h2, h3, h4 {
+    font-family: "PPMondwest";
+}
+
+.writing > h4 {
+    border-bottom: 1px solid var(--beta);
+}
