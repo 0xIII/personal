@@ -9,3 +9,8 @@
     src: url("./assets/fonts/PPWriter-Book.otf") format("opentype");
     font-weight: 400;
 }
+
+@font-face {
+    font-family: "Alto";
+    src: url("./assets/fonts/AltoMono.ttf") format("truetype");
+}
