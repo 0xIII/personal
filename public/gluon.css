@@ -3,36 +3,24 @@
     --beta: #12100E;
 }
 
-body { color: var(--beta); background-color: var(--alpha);
-    font-family: Courier, "Courier New", monospace;
-    width: fit-content; font-size: 0.75rem; padding: 0 1rem; line-height: 1.2em;}
+h1,h2,h3,h4 { font-family: "CMU Classical", serif; }
+body { color: var(--beta); background-color: var(--alpha); font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; max-width: 30em; padding-left: 1.5em; }
 
-nav { display: flex; flex-direction: flex-row; justify-content: space-between; }
-nav > span { align-self: center; }
+nav { display: flex; justify-content: space-between; align-items: baseline;}
 
-ol { display: flex; flex-direction: column; flex-wrap: wrap; min-width: 30em; list-style: upper-roman; padding-left: 0; }
-ol > li { padding: 0.25rem 0; width: fit-content; }
-
-a { text-underline-offset: 2px; color: var(--beta); }
+a { text-underline-offset: 2px; color: var(--beta); font-family: "CMU Classical", serif; }
 a:hover { color: var(--alpha); background-color: var(--beta); text-decoration: none; }
 
-article { line-height: 1.2rem; width: 30em; /*text-align: justify;*/ padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 0; }
-article > li { list-style-type: square; margin-left: 1em;}
-/* article > li::before { content: "◼"; padding-right: 8px; } */
-
 img { max-width: 100%; }
+.img > span { float: right; }
 
 footer { border-top: 1px solid var(--beta); position: fixed; width: 30em; bottom: 0; left: 1.5rem; background-color: var(--alpha); padding-bottom: 0.5em;}
 footer > span { padding-top: 0.5rem; padding-bottom: 0.5rem; float:right; }
 footer > img { height: 1.5em; max-width: 100%; display: inline-block; }
 
-ol > li { list-style-type: none; padding: .2rem;}
-
-ol > li > p { margin-top: 0.1em; width: 30em; }
-
 ::-moz-selection { color: var(--alpha); background: var(--beta); }
 ::selection { color: var(--alpha); background: var(--beta); }
 
-h1, h2, h3, h4 {
-    font-family: "PPMondwest";
-}
+ol { list-style-type: upper-roman; }
+ol > li { margin-bottom: 0.2em; }
+ol > li > p { margin: 0; }
