@@ -11,7 +11,7 @@ nav { display: flex; justify-content: space-between; align-items: baseline;}
 a { text-underline-offset: 2px; color: var(--beta); font-family: "CMU Classical", serif; }
 a:hover { color: var(--alpha); background-color: var(--beta); text-decoration: none; }
 
-img { max-width: 100%; }
+img { max-width: 100%; border: 1px solid black; }
 .img > span { float: right; }
 
 footer { border-top: 1px solid var(--beta); position: fixed; width: 30em; bottom: 0; left: 1.5rem; background-color: var(--alpha); padding-bottom: 0.5em;}
@@ -26,3 +26,5 @@ ol > li { margin-bottom: 0.2em; }
 ol > li > p { margin: 0; }
 
 p { line-height: 1.5em; }
+
+pre { padding: 0.5em 1em; border: 1px solid black; margin: 0; }
